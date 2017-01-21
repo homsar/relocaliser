@@ -75,6 +75,8 @@ def generate_image(steps, filename):
          title_width, title_height, *_) = context.text_extents(title)
         if title_width > text_width:
             context.set_font_size(font_size * text_width / title_width)
+            (title_dx, title_dy,
+             title_width, title_height, *_) = context.text_extents(title)
 
         text_vpos = (top_margin + step * i + flag_height / 2
                      - title_dy - title_height / 2)
